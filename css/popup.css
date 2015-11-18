@@ -1,0 +1,14 @@
+body {
+  width: 400px;
+  height: 185px;
+  text-align: center;
+}
+
+textarea {
+  width: 99%;
+  height: 150px;
+}
+
+p {
+  font-size: 14pt;
+}

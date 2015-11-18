@@ -1,0 +1,50 @@
+{
+  "name": "Merlot.org Recommender",
+
+  "description": "This extension recommender objects for users of Merlot.org",
+
+  "version": "0.1",
+
+  "author": "Luan Einhardt <ldseinhardt@inf.ufpel.edu.br>",
+
+  "permissions": [
+    "<all_urls>",
+    "declarativeContent",
+    "tabs"
+  ],
+
+  "web_accessible_resources": [
+    "settings.json"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.merlot.org/merlot/viewMember.htm*"
+      ],
+      "css": [
+        "css/merlot.css"
+      ],
+      "js": [
+        "js/merlot.js"
+      ]
+    }
+  ],
+
+  "background": {
+    "scripts": ["js/background.js"],
+    "persistent": false
+  },
+
+  "page_action": {
+    "default_title": "Merlot.org Recommender",
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+
+  "icons": {
+    "128": "icon.png"
+  },
+
+  "manifest_version": 2
+}
