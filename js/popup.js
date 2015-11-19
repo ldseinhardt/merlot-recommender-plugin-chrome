@@ -5,9 +5,10 @@
 
   // evento clicar para enviar feedback
   document.getElementById('send').addEventListener('click', sendFeedback);
-  document.getElementById('feedback').addEventListener('keydown', function(e) {
-    if (e.which == 13) {
-      e.preventDefault();
+  // evento enter paara enviar feedback
+  document.getElementById('feedback').addEventListener('keydown', function(event) {
+    if (event.which == 13) {
+      event.preventDefault();
       sendFeedback();
     }
   });
@@ -27,7 +28,7 @@
         }
       });
 
-    }, 'json');
+    });
   }
 
   // função ajax para realizar requisições

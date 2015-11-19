@@ -88,9 +88,9 @@
         });
       });
 
-    }, 'json');
+    });
 
-  }, 'json');
+  });
 
   // função ajax para realizar requisições
   function GET(url, callback) {
